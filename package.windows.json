@@ -10,7 +10,6 @@
     "dev": "nf start",
     "build-client": "cd client && npm run build",
     "clean-assets": "if  exist \"public\" rmdir /s /q \"public\"",
-    "COMMENT":"XCOPY IS NOT COPING THE STATIC FOLDER",
     "copy-assets": "mkdir \"public\" && xcopy /E  \"client\\build\" \"public\"",
     "compile-server": "rmdir /s /q \"dist\" && babel server --out-dir dist",
     "pre-deploy": "npm run compile-server && npm run build-client && npm run clean-assets && npm run copy-assets",
