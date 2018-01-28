@@ -4,19 +4,18 @@ import App from "./App";
 import "./index.css";
 
 const oldFetch = window.fetch;
-window.fetch = (url, settings = {}) => (
+window.fetch = (url, settings = {}) => {
   oldFetch(url, {
     ...settings,
     headers: {
       ...settings.headers,
-      authorization: localStorage.getItem("token"),
+      authorization: localStorage.getItem("token")
     },
   });
-);
+};
 
 
 ReactDOM.render(
   <App />,
   document.getElementById("root")
 );
-
