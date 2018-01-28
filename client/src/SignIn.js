@@ -48,7 +48,7 @@ class SignUp extends Component {
           />
         </FormGroup>
         <Button type="submit">
-         Sign In
+         Sign Indd
        </Button>
       </form>
     );
