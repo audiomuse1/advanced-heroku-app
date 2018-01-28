@@ -23,7 +23,7 @@ class SignUp extends Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <FormGroup>
-          <ControlLabel>Usernewme</ControlLabel>
+          <ControlLabel>Usernewmasdadse</ControlLabel>
           <FormControl
             type="email"
             name="username"
