@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
 import SignUpSignIn from "./SignUpSignIn";
 import TopNavbar from "./TopNavbar";
 import Secret from "./Secret";
+import Main from "./components/Main"
+
+
+
+
 
 class App extends Component {
   constructor() {
@@ -122,6 +127,13 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+        <Link to="/main">List of Chemicals</Link>
+
+        <Switch>
+        <Route path="/main" component={Main} />
+        </Switch>
+
+        
           <TopNavbar 
             showNavItems={this.state.authenticated} 
             onSignOut={this.handleSignOut} />
@@ -133,3 +145,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+
